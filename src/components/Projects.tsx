@@ -8,7 +8,7 @@ const Projects = () => {
       description: "Aplicação desktop para extração, tratamento e organização de dados de PDFs, com exportação para planilhas e interface gráfica desenvolvida com PyWebView, HTML, CSS e JavaScript.",
       image: "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=800",
       tech: ["Python", "Html", "Css", "JavaScript"],
-      concluded: true,
+      status: "done", // concluído
       show: false,
       showProject: false,
       github: "https://github.com/luizdaviDL/projectEstagy",
@@ -18,10 +18,10 @@ const Projects = () => {
       title: "FraseMe",
       description: "Aplicativo de gerenciamento de aprendizado de idiomas para autodidatas",
       image: "../fraseMe.png",
-      concluded: true,
+      status: "done-updating", // concluído / em atualização
       show: true,
       showProject: true,
-      tech: ["React", "Pthon", "PostgreSQL"],
+      tech: ["React", "Python", "PostgreSQL"],
       live: "https://fraseme.netlify.app/main",
       github: "https://github.com/luizdaviDL/fraseMe", 
     },    
@@ -29,7 +29,7 @@ const Projects = () => {
       title: "Flex-Data",
       description: "Plataforma de gestão integrada para empresas avícolas, com controle completo de incubatórios, granjas e produtores integrados.",
       image: "../appMeta.png",
-      concluded: false,
+      status: "development", // em desenvolvimento
       showProject: false,
       show: true,
       tech: ["React", "Java", "PostgreSQL"],
@@ -79,10 +79,18 @@ const Projects = () => {
                       </span>
                     ))}
                   </div>
+
+                  {/* Status badge */}
                   <span
                     style={{
-                      backgroundColor: project.concluded ? "#22c55e" : "#facc15", // verde ou amarelo
-                      color: project.concluded ? "#fff" : "#000",
+                      backgroundColor:
+                        project.status === "done"
+                          ? "#22c55e"
+                          : project.status === "development"
+                          ? "#facc15"
+                          : "#3b82f6", // Azul para done-updating
+                      color:
+                        project.status === "development" ? "#000" : "#fff",
                       padding: "0.3rem 0.8rem",
                       borderRadius: "999px",
                       fontSize: "0.75rem",
@@ -91,11 +99,14 @@ const Projects = () => {
                       marginBottom: "0.75rem"
                     }}
                   >
-                    {project.concluded ? "Projeto Concluído" : "Em Desenvolvimento"}
+                    {project.status === "done"
+                      ? "Projeto Concluído"
+                      : project.status === "development"
+                      ? "Em Desenvolvimento"
+                      : "Concluído / Em Atualização"}
                   </span>
 
-
-                  
+                  {/* Links */}
                   {project.show && (
                     <div className="flex space-x-4">
                       <a
@@ -120,7 +131,6 @@ const Projects = () => {
                       )}
                     </div>
                   )}
-                   
                 </div>
               </div>
             ))}
