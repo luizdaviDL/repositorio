@@ -5,7 +5,7 @@ const Projects = () => {
   const projects = [
     {
       title: "AjusteFAST",
-      description: "Aplicação desktop para extração, tratamento e organização de dados de PDFs, com exportação para planilhas e interface gráfica desenvolvida com PyWebView, HTML, CSS e JavaScript.",
+      description: "Aplicação desktop para extração, tratamento e organização de dados de PDFs, com exportação para planilhas e interface gráfica desenvolvida com PyWebView, HTML, CSS e JavaScript. Por se tratar de um sistema interno de uma empresa na qual atuei, a demonstração pública não está disponível.",
       image: "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=800",
       tech: ["Python", "Html", "Css", "JavaScript"],
       status: "done", // concluído
