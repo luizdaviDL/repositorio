@@ -24,14 +24,13 @@ const Hero = () => {
           <h1 className="text-5xl md:text-7xl font-bold text-slate-800 mb-6 animate-fade-in">
             Olá, eu sou
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent block">
-              Dev backend
+              Desenvolvedor Fullstack
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-slate-600 mb-8 max-w-2xl mx-auto leading-relaxed">
             Desenvolvedor fullstack com foco em React no frontend e Java (Spring) e Python no backend, 
             criando soluções modernas para a web.
-
           </p>
           
           <div className="flex justify-center space-x-6 mb-12">
