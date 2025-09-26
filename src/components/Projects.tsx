@@ -25,17 +25,7 @@ const Projects = () => {
       live: "https://fraseme.netlify.app/main",
       github: "https://github.com/luizdaviDL/fraseMe", 
     },    
-    {
-      title: "Flex-Data",
-      description: "Plataforma de gestão integrada para empresas avícolas, com controle completo de incubatórios, granjas e produtores integrados.",
-      image: "../appMeta.png",
-      status: "development", // em desenvolvimento
-      showProject: false,
-      show: true,
-      tech: ["React", "Java", "PostgreSQL"],
-      live: "https://fraseme.netlify.app/main",
-      github: "https://github.com/luizdaviDL/front-Meta", 
-    },    
+        
   ];
 
   return (
