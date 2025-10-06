@@ -47,16 +47,17 @@ const About = () => {
                 Desenvolvedor Full Stack
               </h3>
               <p className="text-slate-600 mb-6 leading-relaxed">
-                Com 2 de experiência em desenvolvimento fullstack, atuo na criação de aplicações modernas 
-                com React no frontend e APIs com Java (Spring Boot) e Python no backend. Busco sempre soluções eficientes,
-                 práticas e centradas no usuário.
+                Sou desenvolvedor de software com cerca de 2 anos e meio de 
+                experiência prática em projetos de tecnologia, adquirida em estágios 
+                e trabalhos como freelancer. Tenho experiência no desenvolvimento de APIs
+                 REST com Java (Spring Boot) e Python, além de conhecimentos em automação de 
+                 processos, machine learning e desenvolvimento web com React.js. Busco criar 
+                 soluções eficientes e escaláveis aplicando boas práticas, como os princípios SOLID, 
+                 e estou sempre em busca de aprender e explorar novas tecnologias em projetos desafiadores.
               </p>
-              <p className="text-slate-600 mb-6 leading-relaxed">
-                Gosto de transformar ideias complexas em soluções simples que realmente agreguem ao cotidiano 
-                do usuário,sempre priorizando a experiência e a qualidade do código.
-              </p>
+              
               <div className="flex flex-wrap gap-2">
-                {['React', 'Java', 'Python', 'SQL'].map((tech) => (
+                {['React', 'Java', 'Python', 'SQL', 'Machine Learning'].map((tech) => (
                   <span
                     key={tech}
                     className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
