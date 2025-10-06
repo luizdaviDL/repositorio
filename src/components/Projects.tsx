@@ -25,6 +25,17 @@ const Projects = () => {
       live: "https://fraseme.netlify.app/main",
       github: "https://github.com/luizdaviDL/fraseMe", 
     },    
+    {
+      title: "Loja online",
+      description: "Loja online integrada com machine learning para análise de fraudes em compras e monitoramento inteligente de baixa de estoque",
+      image: "../adm.png",
+      status: "building", // concluído / em atualização
+      show: true,
+      showProject: false,
+      tech: ["React.js", "Python", "Java Spring boot", "Api Rest"],
+      //live: "https://fraseme.netlify.app/main",
+      github: "https://github.com/luizdaviDL/virtualShopping_backend.git", 
+    },   
         
   ];
 
@@ -63,7 +74,7 @@ const Projects = () => {
                     {project.tech.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="px-2 py-1 bg-slate-100 text-slate-700 rounded text-sm font-medium"
+                        className="px-2 py-1 bg-slate-300 text-slate-800 rounded text-sm font-medium"
                       >
                         {tech}
                       </span>
@@ -74,11 +85,13 @@ const Projects = () => {
                   <span
                     style={{
                       backgroundColor:
-                        project.status === "done"
+                         project.status === "done"
                           ? "#22c55e"
                           : project.status === "development"
                           ? "#facc15"
-                          : "#3b82f6", // Azul para done-updating
+                          : project.status === "building"
+                          ? "#8b0876ff"  // Cor laranja para building
+                          : "#3b82f6",
                       color:
                         project.status === "development" ? "#000" : "#fff",
                       padding: "0.3rem 0.8rem",
@@ -93,6 +106,8 @@ const Projects = () => {
                       ? "Projeto Concluído"
                       : project.status === "development"
                       ? "Em Desenvolvimento"
+                      : project.status === "building"
+                      ? "Em Construção"
                       : "Concluído / Em Atualização"}
                   </span>
 
